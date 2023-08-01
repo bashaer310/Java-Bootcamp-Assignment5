@@ -70,7 +70,7 @@ public class Main {
         int num=0;
         do {
             System.out.println("Welcome to Admin page, please choose one of the options:"
-            +"\n1.Get the detailed info of an employee"+"\n2.Update salary of an employee"+"\n3.Display info of all employee"+"\n5.Exit");
+            +"\n1.Get the detailed info of an employee"+"\n2.Update salary of an employee"+"\n3.Display info of all employee"+"\n4.Exit");
             num=input.nextInt();
             input.nextLine();
             switch (num){
