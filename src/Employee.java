@@ -36,9 +36,9 @@ public class Employee {
         return salary * 12;
     }
 
-    public int raisedSalary(int percent){
+    public double raisedSalary(int percent){
 
-        return salary + (salary * (percent/100));
+        return salary+(salary*(double)percent/100);
     }
 
 
