@@ -70,12 +70,12 @@ public class Main {
         int num=0;
         do {
             System.out.println("Welcome to Admin page, please choose one of the options:"
-            +"\n1.Get info of an employee"+"\n2.Update salary of an employee"+"\n3.Display info of all employee"+"\n5.Exit");
+            +"\n1.Get the detailed info of an employee"+"\n2.Update salary of an employee"+"\n3.Display info of all employee"+"\n5.Exit");
             num=input.nextInt();
             input.nextLine();
             switch (num){
                 case 1:
-                    System.out.println("\nPlease enter id ");
+                  System.out.println("\nPlease enter id ");
                     String id=input.nextLine();
                     int index=-1;
                     for (int i = 0; i <OBJEmployee.length ; i++) {
@@ -85,7 +85,10 @@ public class Main {
                     }
                     if(index!=-1)
                     {
-                        System.out.println(OBJEmployee[index].toString());
+                        System.out.println("What is the percent of The raised salary");
+                        int percentNum=input.nextInt();
+                        input.nextLine();
+                        System.out.println("\nName is "+OBJEmployee[index].getName()+"\nSalary is "+OBJEmployee[index].getSalary()+"\nThe annual Salary is "+OBJEmployee[index].getAnnualSalary()+"\nThe salary with raised is "+OBJEmployee[index].raisedSalary(percentNum));
                     }
                     else
                         System.out.println("\nId is not found ");
