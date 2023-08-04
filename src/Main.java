@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+//Bashaer Alhuthali
+//Java Bootcamp
+
 public class Main {
     public static void main(String[] args) {
 
@@ -11,12 +14,12 @@ public class Main {
         int num=0;
         do {
             System.out.println("Welcome "+OBJAccount.getName()+" registered by id: "+OBJAccount.getId()+", please choose one of the options:"
-            +"\n1.credit"+"\n2.debit"+"\n3.transferTo"+"\n4.reporting of balance"+"\n5.Exit");
+            +"\n1.Credit"+"\n2.Debit"+"\n3.TransferTo"+"\n4.Cheking of balance"+"\n5.Exit");
             num=input.nextInt();
             input.nextLine();
             switch (num){
                 case 1:
-                    System.out.println("\nPlease enter an amount ");
+                    System.out.println("\nPlease enter the amount ");
                     int num2=input.nextInt();
                     input.nextLine();
                     int oldBalance=OBJAccount.getBalance();
@@ -27,18 +30,18 @@ public class Main {
                         System.out.println("\nyour balance after the operation is "+newBalance);
                    break;
                 case 2:
-                    System.out.println("\nPlease enter an amount ");
+                    System.out.println("\nPlease enter the amount ");
                     int num3=input.nextInt();
                     input.nextLine();
                     int newBalance1=OBJAccount.debit(num3);
                     System.out.println("\nYour balance is"+newBalance1);
                     break;
                 case 3:
-                    System.out.println("\nPlease enter id of another account ");
+                    System.out.println("\nPlease enter the id of another account ");
                     String id=input.nextLine();
                     if(id.equals(OBJAccount1.getId()))
                     {
-                        System.out.println("\nPlease enter an amount ");
+                        System.out.println("\nPlease enter the amount ");
                         int num4=input.nextInt();
                         input.nextLine();
                         int oldBalance2=OBJAccount.getBalance();
@@ -49,7 +52,7 @@ public class Main {
                             System.out.println("\nyour balance after the operation is "+newBalance2);
                     }
                     else
-                        System.out.println("\nId is invalid ");
+                        System.out.println("\nThe id is invalid ");
                     break;
                 case 4:
                     System.out.println("\nYour balance is "+OBJAccount.getBalance());
@@ -85,17 +88,17 @@ public class Main {
                     }
                     if(index!=-1)
                     {
-                        System.out.println("What is the percent of The raised salary");
+                        System.out.println("What is the percent of the raised salary");
                         int percentNum=input.nextInt();
                         input.nextLine();
-                        System.out.println("\nName is "+OBJEmployee[index].getName()+"\nSalary is "+OBJEmployee[index].getSalary()+"\nThe annual Salary is "+OBJEmployee[index].getAnnualSalary()+"\nThe salary with raised is "+OBJEmployee[index].raisedSalary(percentNum));
+                        System.out.println("\nThe Name is "+OBJEmployee[index].getName()+"\nThe salary is "+OBJEmployee[index].getSalary()+"\nThe annual Salary is "+OBJEmployee[index].getAnnualSalary()+"\nThe salary with raised is "+OBJEmployee[index].raisedSalary(percentNum));
                     }
                     else
-                        System.out.println("\nId is not found ");
+                        System.out.println("\nthe id is not found ");
 
                     break;
                 case 2:
-                    System.out.println("\nPlease enter id ");
+                    System.out.println("\nPlease enter the id ");
                     String id1=input.nextLine();
                     int index1=-1;
                     for (int i = 0; i <OBJEmployee.length ; i++) {
@@ -111,7 +114,7 @@ public class Main {
                         OBJEmployee[index1].setSalary(salary1);
                     }
                     else
-                        System.out.println("\nId is not found ");
+                        System.out.println("\nThe id is not found ");
                     break;
                 case 3:
                     for (int i = 0; i <OBJEmployee.length ; i++)
