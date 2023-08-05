@@ -14,7 +14,7 @@ public class Main {
         int num=0;
         do {
             System.out.println("Welcome "+OBJAccount.getName()+" registered by id: "+OBJAccount.getId()+", please choose one of the options:"
-            +"\n1.Credit"+"\n2.Debit"+"\n3.TransferTo"+"\n4.Cheking of balance"+"\n5.Exit");
+            +"\n1.Credit"+"\n2.Debit"+"\n3.TransferTo"+"\n4.Check of the balance"+"\n5.Exit");
             num=input.nextInt();
             input.nextLine();
             switch (num){
@@ -52,7 +52,7 @@ public class Main {
                             System.out.println("\nyour balance after the operation is "+newBalance2);
                     }
                     else
-                        System.out.println("\nThe id is invalid ");
+                        System.out.println("\nThe account is not found ");
                     break;
                 case 4:
                     System.out.println("\nYour balance is "+OBJAccount.getBalance());
@@ -73,12 +73,12 @@ public class Main {
         int num=0;
         do {
             System.out.println("Welcome to Admin page, please choose one of the options:"
-            +"\n1.Get the detailed info of an employee"+"\n2.Update salary of an employee"+"\n3.Display info of all employee"+"\n4.Exit");
+            +"\n1.Get the detailed info of an employee"+"\n2.Update the salary of an employee"+"\n3.Display the info of all employee"+"\n4.Exit");
             num=input.nextInt();
             input.nextLine();
             switch (num){
                 case 1:
-                  System.out.println("\nPlease enter id ");
+                  System.out.println("\nPlease enter the id ");
                     String id=input.nextLine();
                     int index=-1;
                     for (int i = 0; i <OBJEmployee.length ; i++) {
@@ -91,10 +91,10 @@ public class Main {
                         System.out.println("What is the percent of the raised salary");
                         int percentNum=input.nextInt();
                         input.nextLine();
-                        System.out.println("\nThe Name is "+OBJEmployee[index].getName()+"\nThe salary is "+OBJEmployee[index].getSalary()+"\nThe annual Salary is "+OBJEmployee[index].getAnnualSalary()+"\nThe salary with raised is "+OBJEmployee[index].raisedSalary(percentNum));
+                        System.out.println("\nThe Name is "+OBJEmployee[index].getName()+", salary is "+OBJEmployee[index].getSalary()+", annual Salary is "+OBJEmployee[index].getAnnualSalary()+", salary with raised is "+OBJEmployee[index].raisedSalary(percentNum));
                     }
                     else
-                        System.out.println("\nthe id is not found ");
+                        System.out.println("\nThe employee is not found ");
 
                     break;
                 case 2:
@@ -114,7 +114,7 @@ public class Main {
                         OBJEmployee[index1].setSalary(salary1);
                     }
                     else
-                        System.out.println("\nThe id is not found ");
+                        System.out.println("\nThe employee is not found ");
                     break;
                 case 3:
                     for (int i = 0; i <OBJEmployee.length ; i++)
