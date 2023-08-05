@@ -27,7 +27,7 @@ public class Main {
                     if(OBJAccount.getBalance() == oldBalance)
                         System.out.println("\nSorry, your balance is not enough ");
                     else
-                        System.out.println("\nyour balance after the operation is "+newBalance);
+                        System.out.println("\nYour balance after the operation is "+newBalance);
                    break;
                 case 2:
                     System.out.println("\nPlease enter the amount ");
@@ -49,7 +49,7 @@ public class Main {
                         if(OBJAccount.getBalance() == oldBalance2)
                             System.out.println("\nSorry, your balance is not enough ");
                         else
-                            System.out.println("\nyour balance after the operation is "+newBalance2);
+                            System.out.println("\nYour balance after the operation is "+newBalance2);
                     }
                     else
                         System.out.println("\nThe account is not found ");
